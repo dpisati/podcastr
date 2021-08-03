@@ -1,34 +1,134 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h3 align="center">
+    <img src="./.github/letmeaskLogoPng.png" alt="Letmeask" />
+    <br><br>
+    <b>Letmeask, create rooms for Q&A.</b>  
+    <br>
+</h3>
 
-## Getting Started
+## Live Demo
 
-First, run the development server:
+- [View Live Demo](https://pisati-letmeask.web.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
+# Index
+
+- [About](#about)
+- [Functionalities](#functionalities)
+- [Technologies](#technologies)
+- [Preview Web](#preview-web)
+- [Preview Mobile](#preview-mobile)
+- [How to use](#how-to-use)
+- [How to contribute](#how-to-contribute)
+
+<br>
+
+<a id="about"></a>
+
+## :bookmark: About
+
+<strong>Letmeask</strong> is a realtime web application and to create rooms for Q&A.
+
+This application was made during the <strong>Next Level Week - Together</strong> promoted by [Rocketseat](https://rocketseat.com.br/). 
+The app was made to help people to combine questions organized by room. Inside each room, the admin can: highlight, answer and delete questions made in real-time!
+
+<br>
+
+<a id="functionalities"></a>
+
+## :dart: Functionalities
+
+<br>
+
+- Users:
+  - [x] Login using Google account.
+  - [x] Create a new room.
+  - [x] Manage room as administrator.
+  - [x] Enter in an existed room using the room code.
+
+- Admin:
+  - [x] Highlight question.
+  - [x] Check question as answered.
+  - [x] Delete question.
+  - [x] Close room.
+  
+<br>
+
+<a id="technologies"></a>
+
+## :rocket: Technologies
+
+The project is made with:
+
+- [ReactJS](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Firebase Auth](https://firebase.google.com/)
+- [Firebase Realtime Database](https://firebase.google.com/)
+
+<br>
+
+<a id="preview-web"></a>
+
+## :heavy_check_mark: :computer: Web
+
+<h1 align="center">
+    <img alt="Web" src=".github/letmeask.gif" width="900px">
+</h1>
+
+<br>
+
+<a id="how-to-use"></a>
+
+## :fire: How to Use
+
+- ### **Dependencies**
+
+  - Is **required** to install **[Node.js](https://nodejs.org/en/)**
+  - In order to run scripts and install dependencies you need to install a **package manager** (ie: **[YARN](https://yarnpkg.com/)**).
+
+  <br>
+
+1. First step, clone this github repository:
+
+```sh
+  $ git clone https://github.com/dpisati/letmeask.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the application:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```sh
+  # Install dependencies for each folder: mobile, server, web.
+  $ yarn
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+  # Run the app on localhost.
+  $ yarn start
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+3. Setup an firebase, using auth and realtime database. [Firebase](https://firebase.google.com/):
 
-## Learn More
+The **web** application requires a few **tokens** from Firebase. To be able to get those, create a new project on Firebase. Go to the web project and setting to be able to generate the variables listed below.
 
-To learn more about Next.js, take a look at the following resources:
+Example:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+File: `letmeask/.env.local`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Content:
 
-## Deploy on Vercel
+```text
+REACT_APP_API_KEY
+REACT_APP_AUTH_DOMAIN
+REACT_APP_DATABASE_URL
+REACT_APP_PROJECT_ID
+REACT_APP_STORAGE_BUCKET
+REACT_APP_MESSAGING_ID
+REACT_APP_APP_ID
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<br>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<a id="how-to-contribute"></a>
+
+## :recycle: How to Contribute
+
+- Create a Fork from this repo,
+- Create a branch with your feature: `git checkout -b my-feature`
+- Commit changes: `git commit -m 'feat: My new feature'`
+- Push to your branch: `git push origin my-feature`
